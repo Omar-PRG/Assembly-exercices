@@ -1,0 +1,146 @@
+# ASM
+
+Give the values stored in the registers after the following instructions:
+
+## MOV
+
+1)
+
+	mov r1, 1
+
+r1=1
+
+2)
+	mov r1, 0x1234
+	mov r2, r1
+
+r1=0x1234
+r2=0x1234
+
+## LOAD / STORE
+
+Give the values stored in the registers after the following instructions and the addresses accessed and their values:
+
+1)
+
+	mov r1, 0xdeadbeef
+	mov r2, 0x0
+ 	str r2, [r1]
+
+r1=0xdeadbeef
+r2=0x0
+[0xdeadbeef]=0x0
+
+2)
+
+	mov r3, 0xaabbccdd
+	str r3, [r3]
+	ldr r1, [r3]
+
+r1=0xaabbccdd(content of [0xaabbccdd])
+r3=0xaabbccdd
+[0xaabbccdd]=0xaabbccdd
+
+
+3)
+
+	mov r1, 0x0
+	mov r2, 0xdeadbeef
+	str r1, [r2 + 4]!	 dans 0xdeadbef3, on store 0x0, en plus r2=0xdeadbef3 0xdeadbef3                               
+	mov r3, r2              r3=0xdeadbef3
+	ldr r1, [r2]             r1=0x00
+
+r1=0x0
+r2=0xdeadbef3
+r3=0xdeadbef3
+[...]=
+
+## STACK
+
+Give the following stack and registers...
+
+    0x4533007c ..........| 00000004 |
+    0x45330078 ..........| AABBCCDD |
+    0x45330074 ..........|          |
+    0x45330070 ..........|          |
+    0x4533006c ..........|          |
+    0x45330068 ..........|          |
+
+sb=0x4533007c
+sp=0x45330078
+
+Draw the stack state after the following instructions and give content of the registers:
+
+1)
+    mov r1, 0x3
+    push r1
+
+
+r1=0x3
+sb=0x45330078
+sp=0x45330074
+
+2)
+
+    pop r1
+
+r1=0x3
+sb=0x45330078
+sp=0x45330078
+
+3)
+
+    push 0x0
+    pop r1
+    push r1
+    mov r2, r1
+    push r2
+    pop r1
+
+r1=0x0
+r2=0x0
+sb=0x45330078
+sp=0x45330074
+
+
+# BRANCH
+
+Give the values stored in the registers after the following instructions:
+
+1)
+
+	mov r1, 0
+	b _label
+_label:
+	nop
+
+r1=0
+
+2)
+
+	mov r2, 4
+	mov r1, 0
+_label
+	add r1, 1
+	cmp r1, r2
+	bne _label
+
+r1=4
+r2=4
+
+3)
+
+	mov r1, 5
+	mov r2, 4
+	cmp r1, r2
+	ble _label
+        add r1, 3
+_label
+	sub r1, 3
+	
+
+r1=5
+r2=4
+
+
+

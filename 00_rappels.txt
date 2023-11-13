@@ -1,0 +1,84 @@
+# Changing the bases
+1/ Convert 0b101011 in base 16 and base 10
+43
+2B
+2/ Convert 0x01000FDE in base 10 and base 2
+
+3/ Classics (convert to the two other representations)
+    0xFFFF
+    0b1111 1111
+    1024
+
+4/ 2's complement
+    1) Write on 8 bits
+        -31
+        -24
+        -112
+
+    2) Convert it to decimal (signed and unsigned)
+        0b1001
+        0b0010
+        0b1111
+
+    3) Write the negative :
+        0x0011
+        0xABCD
+
+
+
+# Bitwise operation
+
+    Resolve the following equations
+
+    1) NEG
+
+        neg 0b10 =
+
+        neg 0b01011001 =
+
+        neg 0b110101101 =
+
+
+    2) OR
+
+        0b1010 or 0b1101 =
+
+        0b1110 or 0b1000 =
+
+        0b00000001 or 0b00011100 =
+
+        0xFFFE or 0x3 =
+
+        0x45B0 or 0xF4B3 =
+
+
+    3) AND
+
+        0b1010 and 0b0001 =
+
+        0b00010110 and 0b00111110 =
+
+        0b00010101 and 0b00111000 =
+
+        0x03 and 0x02 =
+
+        0x56480 and 0xFF =
+
+        0x86A3D3 and 0xFFF001 =
+
+        0xCCCCCC and 0x88888 =
+
+
+    4) XOR
+
+        0b0111 xor 0b0101 =
+
+        0x03 xor 0x05 =
+
+        0b01011101 xor 0b00011110 =
+
+        0x43 xor 0x85 =
+
+        0xC6 xor 0x43 =
+
+        0xFFFF xor 0x7 =
