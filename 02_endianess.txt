@@ -30,7 +30,7 @@
 
   3A  27  44  20  44  6F  6E  27
 5) Read the double word in little endian at address 0x00B6:
-  61 68 74 20 44 6F 6E 27
+  61 68 74 20 77 6F 6E 6B
 
 6) Read the double word in little-endian at address 0x001E:
      20 65 68 74 20 6b 6f 6f
