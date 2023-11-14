@@ -25,12 +25,12 @@
 
 3) Read the word in little endian at address 0x004D:
 
-  69 3F 20 4F
+  27 27  6F 4F
 4) Read the double word in big endian at address 0x00A8:
 
   3A  27  44  20  44  6F  6E  27
 5) Read the double word in little endian at address 0x00B6:
-  27 74  20  79  6F  75  20  6B 
+  61 68 74 20 44 6F 6E 27
 
 6) Read the double word in little-endian at address 0x001E:
-      65  61  6C  6C  79  20  74  6F
+     20 65 68 74 20 6b 6f 6f
