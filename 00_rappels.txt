@@ -3,26 +3,27 @@
 43
 2B
 2/ Convert 0x01000FDE in base 10 and base 2
-
+base10: 16781278
+base2: 0000 0001 0000 0000 0000 1111 1101 1110
 3/ Classics (convert to the two other representations)
-    0xFFFF
-    0b1111 1111
-    1024
+    0xFFFF     bin:1111 1111 1111 1111/Dec:65535
+    0b1111 1111    Hex: 0xFF   / dec:255
+    1024  bin: 0100 0000 0000/Hex: 0x0400
 
 4/ 2's complement
     1) Write on 8 bits
-        -31
-        -24
-        -112
+        -31 : 11100001
+        -24: 11101000
+        -112: 1001 0000
 
     2) Convert it to decimal (signed and unsigned)
-        0b1001
-        0b0010
-        0b1111
+        0b1001:  signed:-7 Unsigned: 9
+        0b0010  signed and unsigned :2
+        0b1111 signed=-1   unsigned=15
 
     3) Write the negative :
-        0x0011
-        0xABCD
+        0x0011 : 0xFFEF
+        0xABCD  : 5433
 
 
 
@@ -32,53 +33,53 @@
 
     1) NEG
 
-        neg 0b10 =
+        neg 0b10 =0x10
 
-        neg 0b01011001 =
+        neg 0b01011001 =0b10100111 
 
-        neg 0b110101101 =
+        neg 0b110101101 =0b001010011
 
 
     2) OR
 
-        0b1010 or 0b1101 =
+        0b1010 or 0b1101= 0b1111
 
-        0b1110 or 0b1000 =
+        0b1110 or 0b1000 = 0b1110
 
-        0b00000001 or 0b00011100 =
+        0b00000001 or 0b00011100 =0b0001 1101
 
-        0xFFFE or 0x3 =
+        0xFFFE or 0x3 = 1111 1111 1111 1111
 
-        0x45B0 or 0xF4B3 =
+        0x45B0 or 0xF4B3 = 1111 0111 1011 0011
 
 
     3) AND
 
-        0b1010 and 0b0001 =
+        0b1010 and 0b0001 =0b0000
 
-        0b00010110 and 0b00111110 =
+        0b00010110 and 0b00111110 =0b0001 0110
 
-        0b00010101 and 0b00111000 =
+        0b00010101 and 0b00111000 =0b00010000
 
-        0x03 and 0x02 =
+        0x03 and 0x02 =0b0000 0010 or 0x02
 
-        0x56480 and 0xFF =
+        0x56480 and 0xFF =0x56000
 
-        0x86A3D3 and 0xFFF001 =
+        0x86A3D3 and 0xFFF001 =0x86A001
 
-        0xCCCCCC and 0x88888 =
+        0xCCCCCC and 0x88888 =0x80808
 
 
     4) XOR
 
-        0b0111 xor 0b0101 =
+        0b0111 xor 0b0101 =0100
 
-        0x03 xor 0x05 =
+        0x03 xor 0x05 =0x06
 
-        0b01011101 xor 0b00011110 =
+        0b01011101 xor 0b00011110 =0b01000011
 
-        0x43 xor 0x85 =
+        0x43 xor 0x85 =0xC6
 
-        0xC6 xor 0x43 =
+        0xC6 xor 0x43 =0x85
 
-        0xFFFF xor 0x7 =
+        0xFFFF xor 0x7 =0xFFF8
